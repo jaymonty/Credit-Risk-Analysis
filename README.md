@@ -1,12 +1,6 @@
 # Credit-Risk-Analysis
 
-41
-
 Data 245 - Machine Learning Fall, 2022
-
-Project Report
-
-**Credit Risk Analysis**
 
 Dhruv Jain, Edward Montoya, Nghi Nguyen, Tam Huynh
 
@@ -96,7 +90,8 @@ also known as CRISP-DM. Figure 1 shows six phases of the process method.
 
 *CRISP-DM Process WorkFlow*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.001.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 001](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/3c14cb86-faca-4438-89e1-964d7d420e81)
+
 
 The first phase is Business Understanding. It is vital to have a credit card classification system to classify a credit card status. Classifying credit cards based on a customer’s income and spending habits, loans, and other conditions can help prevent economic issues. After understanding the business goal, literature surveys are being done to understand the potential model approaches that can be used to solve this problem.
 
@@ -119,13 +114,16 @@ an object type. There are eight columns with null values. These columns will be 
 
 *Credit Score Data Types and Null Values Information*
 
-Figure 3 shows a part of the data for sample inspection.![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.002.jpeg)
+Figure 3 shows a part of the data for sample inspection.
+
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 002](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/09aaecfe-d204-4105-8f5d-3084cd51bb55)
 
 **Figure 3**
 
 *Credit Score Data Sample*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.003.jpeg)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 003](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/39ac995e-8073-4ca5-87de-2500142c3de3)
+
 
 There are three values for the target Credit\_Score feature, which are ‘Poor’, ‘Standard,’ and ‘ Good.’ The distribution of the target is shown as a donut pie chart in figure 4 below. Clearly, there is an imbalance among the three types, with ‘Poor’ credit status accounting for 28998 rows, ‘Standard’ credit accounts for 53174 rows, and the rest is ‘Good’ credit with 17828 records. Being aware of this target imbalance, there will be an idea to apply target resampling techniques to solve this problem.
 
@@ -133,7 +131,8 @@ There are three values for the target Credit\_Score feature, which are ‘Poor�
 
 *Credit Score Target Feature Distribution*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.004.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 004](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/4b18e102-4977-4039-be05-23960e7c9d97)
+
 
 Figure 5 shows how outliers can be detected through a boxplot for each class of the target feature and potentially the correlation between the target and the ‘Monthly\_Inhand\_Salary’ feature. From the plot, ‘Poor’ targets more outliers in the high salary range, then comes ‘Standard’ status. ‘Good’ credit status people do not have any outliers in a high salary. In this case, we can see the possible positive correlation between a high monthly salary and good credit status.
 
@@ -141,7 +140,8 @@ Figure 5 shows how outliers can be detected through a boxplot for each class of 
 
 *Monthly Inhand Salary Boxplot by Credit Score Status*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.005.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 005](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/1e7417d5-c86d-438d-9449-48402d3dff20)
+
 
 Figure 6 shows the number of credit cards each customer has for each credit card status. There are a lot of outliers going on in this particular feature, and the preprocessing step will take care of it. However, by looking at the distribution, ‘Good’ status credit cards tend to have fewer outliers than the other two classes.
 
@@ -149,7 +149,8 @@ Figure 6 shows the number of credit cards each customer has for each credit card
 
 *Number of Credit Cards Boxplot by Credit Score Status*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.006.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 006](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/003af86f-13fd-47fe-a098-ca1c0abb5251)
+
 
 Figure 7 shows the distribution of the number of days delayed after the due date by each of the credit card class statuses. It is taken from the figure that ‘Good’ status people are less likely to delay their payment after 30 days. The better the credit status is the less number of days the payment is delayed.
 
@@ -157,7 +158,8 @@ Figure 7 shows the distribution of the number of days delayed after the due date
 
 *Number of Days Delayed From Due Date by Credit Status*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.007.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 007](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/a6668669-ec51-4495-9d05-2351fda9eabf)
+
 
 Figure 8 shows the distribution of equated monthly installments by credit status in a strip plot. As inferred from the figure, ‘good’ credit card status has the least outliers, and ‘poor’ has fewer outliers than ‘standard’. It can be inferred that ‘good’ credit might have the least loan to pay every month, and ‘standard’ credit has the most.
 
@@ -165,7 +167,8 @@ Figure 8 shows the distribution of equated monthly installments by credit status
 
 *Equated Monthly Installment by Credit Status*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.008.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 008](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/60dca242-910b-472b-83fe-92b2e9c53ee1)
+
 
 When comparing Figure 5, 6, 7, and 8, we can see that their range value differs from one another, with ‘Monthly\_Inhand\_Salary’ having the highest value of around 14,000 while ‘Delay\_from\_due\_date’ has the highest value of around 1,400, ‘Num\_Credit\_Card’ max value is around 70, and ‘Total\_EMI\_per\_month’ highest value is around 80,000. Inspecting three numerical features raises the idea that there is a need for normalizing the numerical variables so that different features can be weighted similarly without changing the differences in values within each feature.
 
@@ -175,7 +178,8 @@ After understanding some numerical features, we also try to understand the categ
 
 *Credit\_History\_Age Sample Values*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.009.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 009](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/3b3c2d54-0d71-4bea-b724-044fd882bbe5)
+
 
 Similarly, when understanding the number of delayed payments for each customer, we see that the data integrity wasn’t being ensured, as shown in Figure 10. There are ‘\_’ characters for many values; therefore, we will consider cleaning them, converting them into numerical features, and normalizing them.
 
@@ -183,7 +187,7 @@ Similarly, when understanding the number of delayed payments for each customer, 
 
 *Num\_of\_Delayed\_Payment Sample Values*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.010.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 010](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/d6093d80-8463-442a-89bf-4d1a2ea2d47f)
 
 Figure 11 shows the unique values in the ‘Occupation’ feature. Notice that there are odd values that need to be cleaned, like the above variable; however, after cleaning, Occupation should still be kept as a categorical feature. In this case, an appropriate label encoding will be applied in the pre-processing step so that Occupation will be converted into machine-readable values for better performance results.
 
@@ -191,7 +195,8 @@ Figure 11 shows the unique values in the ‘Occupation’ feature. Notice that t
 
 *Occupation Feature Values*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.011.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 011](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/979bfb98-3bd2-42a6-846f-0e0a71f23a19)
+
 
 2. **Data<a name="_page15_x72.00_y463.57"></a> Cleaning**
 1. **Handling<a name="_page15_x72.00_y491.17"></a> Missing Values**
@@ -202,7 +207,7 @@ The first step while cleaning data is to look for missing values. This dataset h
 
 *Percentage Of Missing Values*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.012.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 012](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/a85a8558-cb9e-4a1a-a6cf-ff83a15d3bed)
 
 These missing values were handled in the following ways:
 
@@ -221,7 +226,8 @@ The dataset also had data that was not needed in that particular field. These ki
 
 *Sample Of Messy Data*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.013.jpeg)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 013](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/68e58b62-d3b6-47f3-8bf7-501afb610144)
+
 
 3. **Changing<a name="_page17_x72.00_y379.24"></a> Data Types**
 
@@ -231,7 +237,7 @@ Since there was noisy data in the numerical features, the datatypes of those fea
 
 *Code Implementation To Change Data Types*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.014.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 014](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/6b3d016a-04a9-400e-a870-fed59dedfc3a)
 
 4. **Feature<a name="_page18_x72.00_y72.00"></a> Engineering**
 
@@ -241,13 +247,14 @@ The Credit\_History\_Age feature had the values in string which made it difficul
 
 *Credit\_History\_Age Before Transformation\*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.015.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 015](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/cac07342-cffa-444d-b076-26e021aef988)
 
 **Figure 16**
 
 *Credit\_History\_Age After Transformation*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.016.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 016](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/e5d12611-6de6-468b-942d-9ba03a60cbd8)
+
 
 3. **Data<a name="_page18_x72.00_y631.71"></a> Preprocessing**
 
@@ -257,13 +264,15 @@ After exploring the data, there is a need to preprocess some numerical and categ
 
 *Credit\_Score Target After Encoding*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.017.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 017](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/1d3f9d5b-6dc9-4583-8160-b0625fceef67)
+
 
 Next, ‘Occupation’ is a nominal categorical variable, meaning there is no actual order for the values to follow under. Therefore, dummy encoding has been applied for this pre-processing step. After being encoded, each unique value of the Occupation feature will be transformed into a new column with binary values. For example, if a customer is a Doctor, the column Occupation\_Doctor will have a value of 1, and the rest will have values of 0. Figure 18 shows a new column after Occupation encoding with 15 more columns being added to the data frame. **Figure 18**
 
 *Post Dummy Encoding for Occupation - New Columns*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.018.jpeg)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 018](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/b37c999d-c026-46a5-91da-67560f4bb3b0)
+
 
 Finally, for the numerical variables, MinMax Scaling will be applied to normalize different ranges among the features. Basically, MinMax Scaling will scale each of the declared variables into the range [0,1], with 0 being the minimum value of that feature and 1 being the maximum. Figure 19 shows part of the dataframe after applying normalization.
 
@@ -271,7 +280,8 @@ Finally, for the numerical variables, MinMax Scaling will be applied to normaliz
 
 *Post Normalization For Numerical Variables*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.019.jpeg)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 019](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/ecb08768-8705-44bb-bc7c-a001e4725ee5)
+
 
 6. **Model<a name="_page20_x72.00_y350.73"></a> Selection**
 
@@ -310,7 +320,8 @@ The model development process begins by reading the cleaned preprocessed dataset
 
 *Train, Validate, and Test Diagram*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.020.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 020](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/87049a7b-f825-42bd-b5ae-fff4be8dbda3)
+
 
 After completing the split, the training data was oversampled, which can be seen in figure
 
@@ -320,7 +331,8 @@ After completing the split, the training data was oversampled, which can be seen
 
 *Target Classes Before SMOTE*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.021.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 021](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/d52afc7f-ddb0-489d-9fdb-8761e5c5b780)
+
 
 The figure above clearly shows the imbalance of target classes. The distribution breaks down as 0-20,193 instances, 1-12,506 instances, and 2-37,301 instances. The application of SMOTE oversampled all of the non-majority classes to the same amount as the majority class. Meaning that all of the classes are synthetically oversampled to 37,301 instances each. The figure below shows the target class distribution after SMOTE is applied.
 
@@ -328,7 +340,8 @@ The figure above clearly shows the imbalance of target classes. The distribution
 
 *Target Class After SMOTE*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.022.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 022](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/08ff72af-3e24-48e6-ad8b-f8aff356a2c0)
+
 
 By applying SMOTE, all of the target classes are now synthetically the same amount. This means that the training dataset has grown from 70,000 rows to 111,903 rows. This should equate to better performance for the classifier on every target class.
 
@@ -340,13 +353,15 @@ When we first approached this project, we should have considered implementing a 
 
 *RFECV Plot*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.023.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 023](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/44f02185-4ec8-48e8-92f6-909c7a71183a)
+
 
 The result of the selected features with the highest importance can be seen in figure (). **Figure 24**
 
 *View of Features Selected From RFECV*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.024.jpeg)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 024](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/4e9cabed-f1c5-442c-94bb-7d98a1eec0e3)
+
 
 8. **Model<a name="_page26_x72.00_y99.60"></a> Evaluation**
 1. **Metrics<a name="_page26_x72.00_y141.46"></a> (*F1-macro, Accuracy, AUC, ROC curve)***
@@ -365,7 +380,8 @@ The first model implemented was Logistic Regression. Due to the simplicity of th
 
 *Logistic Regression Initial Model*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.025.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 025](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/6bec20e5-9a11-470e-b035-66bde74bb13c)
+
 
 After the initial validation, the model had SMOTE, and SMOTE plus RFECV applied. The model benefited from applying SMOTE as the F1-macro score went up, which is our primary metric to focus upon. The addition of RFECV caused the model to perform worse, which makes sense because it was not having issues with overfitting. The best-performing Logistic Regression model was just the implementation of SMOTE. Table 2 below shows the performance of Logistic Regression.
 
@@ -373,7 +389,8 @@ After the initial validation, the model had SMOTE, and SMOTE plus RFECV applied.
 
 *Logistic Regression with SMOTE and SMOTE + RFECV*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.026.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 026](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/c1b5d330-713a-4002-a42e-ad4c0a4a9ae7)
+
 
 The plot below depicts the ROC curve for best performing Logistic Regression, which was with SMOTE.
 
@@ -381,7 +398,7 @@ The plot below depicts the ROC curve for best performing Logistic Regression, wh
 
 *Logistic Regression with SMOTE, ROC curve*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.027.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 027](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/5d19912d-7c63-40e9-b52d-be7903ef9eef)
 
 3. **KNN**
 
@@ -391,7 +408,8 @@ The plot below depicts the ROC curve for best performing Logistic Regression, wh
 
 *KNN Initial Model*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.028.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 028](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/fb1351b7-2e1a-4a81-98a0-fa67d9b1b72a)
+
 
 KNN is known to suffer from dimensionality issues, which is the probable cause of its overfitting (Kelleher et al., 2015, p. 281). Table 4 below shows how the implementation of SMOTE helped slightly improve the performance of KNN, and the addition of RFECV feature selection dramatically improved its performance. RFECV mitigated the overfitting issue by training the model with just 10 features and allowed for the model to perform optimally.
 
@@ -399,7 +417,8 @@ KNN is known to suffer from dimensionality issues, which is the probable cause o
 
 *KNN with SMOTE and SMOTE + RFECV*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.029.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 029](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/ecdb01d8-a201-49f6-854a-497f005c4833)
+
 
 The plot below depicts the ROC curve for the best performing KNN, which was with SMOTE + RFECV.
 
@@ -407,7 +426,8 @@ The plot below depicts the ROC curve for the best performing KNN, which was with
 
 *KNN with SMOTE + RFECV, ROC curve*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.030.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 030](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/326b0786-686d-4680-b0d9-c9958edb4c26)
+
 
 4. **Random<a name="_page30_x72.00_y72.00"></a> Forest**
 
@@ -417,7 +437,8 @@ Random Forest is a machine learning technique that is known to not typically ove
 
 *Random Forest Initial Model*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.031.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 031](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/f098c387-4abd-49b5-8985-9b6912ca2303)
+
 
 Applying SMOTE and SMOTE + RFECV improved the model performance slightly. Out-of-the-box Random Forest is a very capable technique, and it is not surprising that the addition of SMOTE and RFECV offered minimal improvements. Perhaps, it is due to how Random Forest works. Random Forest operates by randomly sampling data, and features in an aggregated form, which is like a pseudo-feature selection (Géron, 2019, p. 262). Plus, the model does this sampling with replacement, which means that it can potentially train on more instances of an under-represented target class, which is similar to the benefits of SMOTE (Vanderplas & VanderPlas, 2016, p.444). Table 6 below shows the performance of Random Forest with SMOTE and SMOTE + RFECV.
 
@@ -425,7 +446,8 @@ Applying SMOTE and SMOTE + RFECV improved the model performance slightly. Out-of
 
 *Random Forest with SMOTE and SMOTE + RFECV*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.032.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 032](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/3fedbb71-b7f4-4dfa-a47d-62478fcc258b)
+
 
 The best-performing model ended up being Random Forest with SMOTE + RFECV, but the performance gain over the initial model was minimal. The plot below depicts the ROC curve for Random Forest with SMOTE + RFECV.
 
@@ -433,7 +455,8 @@ The best-performing model ended up being Random Forest with SMOTE + RFECV, but t
 
 *Random Forest with SMOTE + RFECV, ROC curve*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.033.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 033](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/c2329c82-9cab-402c-af3d-541825d4af55)
+
 
 5. **XGBoost**
 
@@ -443,7 +466,8 @@ The best-performing model ended up being Random Forest with SMOTE + RFECV, but t
 
 *XGBoost Initial Model*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.034.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 034](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/bdfcb08b-43bb-4d76-a504-3f5dc552a3c9)
+
 
 The implementation of SMOTE produced some measurable benefits for XGBoost, but RFECV feature selection reduced the model performance. As stated above, this is because the model was not having issues with overfitting. Table 8 below shows the performance of XGBoost with SMOTE and SMOTE + RFECV.
 
@@ -451,7 +475,8 @@ The implementation of SMOTE produced some measurable benefits for XGBoost, but R
 
 *XGBoost with SMOTE and SMOTE + RFECV*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.035.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 035](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/1ba611af-b650-42e1-84c1-f87989f18ded)
+
 
 The best-performing model for XGBoost was XGBoost with SMOTE. The ROC curve plot for this model can be seen in figure 28 below.
 
@@ -459,7 +484,8 @@ The best-performing model for XGBoost was XGBoost with SMOTE. The ROC curve plot
 
 *XGBoost with SMOTE, ROC curve*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.036.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 036](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/063bc953-0e56-4e37-8852-e4c7778956aa)
+
 
 6. **Voting<a name="_page33_x72.00_y338.89"></a> Classifier**
 
@@ -469,7 +495,8 @@ Finally, we wanted to implement a novel classifier that had yet to be done befor
 
 *Voting Classifier Initial Model*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.037.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 037](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/f2e5efe6-b729-4bbe-9b1f-1bd4ae034f7d)
+
 
 Implementing SMOTE and SMOTE + RFECV improved the overall performance of the Voting classifier. The SMOTE + RFECV model was the best-performing classifier out of all the models created in this report.
 
@@ -477,13 +504,15 @@ Implementing SMOTE and SMOTE + RFECV improved the overall performance of the Vot
 
 *Voting Classifier with SMOTE and SMOTE + RFECV*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.038.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 038](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/dbbf4675-c9ad-4cf3-a0d5-50c743c309ea)
+
 
 The plot below visualizes the ROC curve for the Voting classifier **Figure 29**
 
 *Voting with SMOTE + RFECV, ROC curve*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.039.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 039](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/0735cce0-8a09-45a0-8ba1-46a3646073b1)
+
 
 7. **Comparing<a name="_page35_x72.00_y72.00"></a> All Models**
 
@@ -493,7 +522,8 @@ All of the best-performing models from each machine learning technique were comp
 
 *Comparing All of the Models*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.040.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 040](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/ce3efb9d-3e4e-440a-9fb2-c2f15e495fec)
+
 
 8. **Best<a name="_page35_x72.00_y548.12"></a> Model Tuned**
 
@@ -503,7 +533,8 @@ We set up the search parameters as shown in figure 30 below. **Figure 30**
 
 *Randomized Search Parameters*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.041.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 041](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/846ae6d3-48f0-4a62-a075-c27a3f89dc95)
+
 
 The result from the Randomized Search provided the following hyper-parameters as being the best parameters.
 
@@ -511,7 +542,8 @@ The result from the Randomized Search provided the following hyper-parameters as
 
 *Randomized Search Best Parameters*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.042.png)
+
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 042](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/19881fc7-f098-40c5-be14-f7fce289aa75)
 
 The Random Forest model with SMOTE + RFECV was re-trained with new parameters and tested on the validation data, demonstrating performance gains over the non-tuned model.
 
@@ -521,17 +553,14 @@ Finally, the non-tuned and tuned Random Forest models were evaluated on Test dat
 
 *Un-tuned Random Forest Compared to Tuned Random Forest on Test Data*
 
-![](Aspose.Words.4605fa2d-c8f8-4a27-acb0-98773c326984.043.png)
+![Aspose Words 4605fa2d-c8f8-4a27-acb0-98773c326984 043](https://github.com/jaymonty/Credit-Risk-Analysis/assets/18198506/75c2d403-f63f-40be-8165-31d68d36e618)
+
 
 The tuned Random Forest performed superior with a performance increase on all metrics. We felt that this tuned model was ready for deployment.
 
 9. **Deployment**
 
-<a name="_page37_x72.00_y127.20"></a>All the work done and the code implementation has been uploaded to GitHub. GitHub is
-
-a version control software that also allows for collaboration between users. Code implementation can be found at the link below for reference, which provides a detailed understanding of our project. The repository consists of separate python files, one for data preprocessing and the other for model development.
-
-Github URL: <https://github.com/slushi7/Credit_Risk_Analysis>
+<a name="_page37_x72.00_y127.20"></a>All the work done and the code implementation has been uploaded to GitHub.
 
 10. **Conclusion**
 
